@@ -1,0 +1,8 @@
+# Development install links (they point into the dsh installation and $HOME).
+node_modules/
+
+# Test scratch workspaces.
+test/.tmp-*/
+
+# Packing output.
+*.tgz

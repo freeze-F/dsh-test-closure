@@ -1,0 +1,22 @@
+# dsh-test-closure bundle patch.
+#
+# This is a complete, self-contained bundle layer: it inserts the plugin's one
+# capability row over whatever composition it is stacked onto, so a profile
+# enables the whole closed loop by listing this package in
+# `dsh.profile.bundles` (or by adding the row to its own cordis.patch.yml).
+#
+# The row is addressed by id, so a consumer can disable or reconfigure it from
+# a later layer without touching this file:
+#
+#   - id: dsh-test-closure
+#     disabled: true
+#
+#   - id: dsh-test-closure
+#     config:
+#       maxInterceptRounds: 1
+#
+# A patch replaces a row's whole `config`, so restate every field you need.
+
+- insert:
+    - id: dsh-test-closure
+      name: dsh-test-closure
